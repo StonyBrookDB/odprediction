@@ -18,4 +18,4 @@ comdemo: demographics for negative patients\
 
 
 ## Prediction
-This folder includes the files of training and testing the predictive model.\
+This folder includes the files of training and testing the predictive model.
