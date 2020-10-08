@@ -14,6 +14,10 @@ comdx: diagnosis information for negative patients\
 comlab: lab tests information for negative patients\
 commed: medications information for negative patients\
 comdemo: demographics for negative patients\
+labdict: mapping to position of lab test in feature matrix\
+cedict: mapping to position of clinical event in feature matrix\
+dxdict: mapping to position of diagnosis in feature matrix\
+meddict: mapping to position of medication in feature matrix\
 
 
 
