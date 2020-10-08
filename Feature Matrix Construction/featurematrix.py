@@ -1,8 +1,6 @@
 
 
 for i in range(oudlab.shape[0]):
-    if i%3000000==0:
-        print i
     labi=oudlab['lab_id'][i]
     if labi in labdict:
         e=oudlab['encounter_id'][i]
@@ -18,8 +16,6 @@ for i in range(oudlab.shape[0]):
 
 
 for i in range(comlab.shape[0]):
-    if i%3000000==0:
-        print i
     labi=comlab['lab_id'][i]
     if labi in labdict:
         e=comlab['encounter_id'][i]
