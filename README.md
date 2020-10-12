@@ -27,6 +27,8 @@ meddict: mapping to position of medication in feature matrix\
 ## Prediction
 This folder includes the files of training and testing the predictive model.
 
+## Feature Importance
+Using the permutation method to get the features importances.
 
 ## ICD Codes
 This file includes the ICD-9 and ICD-10 codes used in the project to identify Opioid Use Disorder, Opioid Poisoing and Cancer.
