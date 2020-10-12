@@ -174,6 +174,9 @@ for i in range(comdemo.shape[0]):
                 z=racedict[race]
                 comdemox[x,y,z]=1
 
+
+
+
 for i in range(ouddemo.shape[0]):
     e=ouddemo['encounter_id'][i]
     if e in e2p:
@@ -196,3 +199,8 @@ comx=np.concatenate((ouddx,oudlabx,oudmedx,oudcex,ouddemox))
 oudx=np.concatenate((comx,comlabx,commedx,comcex,comdemox))
 
 
+
+
+
+
+    
