@@ -29,7 +29,69 @@ for dx in remaindx:
     dxdict[dx]=position
     position+=1
 
-#Diagnosis selection and dictionary from clinical event to position construction
+# Lab test selection and dictionary from laboratory test to position construction
+labcnt={}
+for i in range(oplab.shape[0]):
+    if i%3000000==0:
+        print i
+    e=oplab['encounter_id'][i]
+    if e in alle2p:
+        pski=alle2p[e]
+        lab=oplab['lab_id'][i]
+        if lab in labcnt:
+            labcnt[lab].add(pski)
+        else:
+            labcnt[lab]=set([pski])
+            
+remainlab=set([])
+for lab in labcnt:
+    if labcnt[ce]>NumOfPatients/100:
+        remainlab.add(lab)
+
+labdict={}
+position=0
+for lab in remainlab:
+    labdict[lab]=position
+    position+=1
+
+# Medication selection and dictionary from  to position construction
+# atc4 is mapping from medication id in HealthFacts to ATC code with first 4 digits
+medcnt={}
+for i in range(oudmed.shape[0]):
+    if i%1000000==0:
+        print i
+    e=oudmed['encounter_id'][i]
+    if e in e2p:
+        p=e2p[e]
+        medid=oudmed['medication_id__hf_d_medication_'][i]
+        if str(medid) not in atc4:
+            a=str(medid)
+            if a in medcnt:
+                medcnt[a].add(p)
+            else:
+                medcnt[a]=set([p])
+            continue
+        atcset=atc3[str(medid)]
+        for a in atcset:
+            if a in medcnt:
+                medcnt[a].add(p)
+            else:
+                medcnt[a]=set([p])
+
+
+remainmed=set([])
+for med in medcnt:
+    if medcnt[ce]>NumOfPatients/100:
+        remainmed.add(med)
+
+meddict={}
+position=0
+for med in remainmed:
+    meddict[med]=position
+    position+=1
+
+# Clinical Event selection and dictionary from clinical event to position construction
+
 cecnt={}
 for i in range(oudce.shape[0]):
     e=oudce['encounter_id'][i]
@@ -52,8 +114,6 @@ for ce in remaince:
     cedict[ce]=position
     position+=1
 
-#Diagnosis selection and dictionary from laboratory test to position construction
-#Diagnosis selection and dictionary from  to position construction
 
 #Race dictionary construction
 length=2
