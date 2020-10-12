@@ -1,6 +1,6 @@
 # odprediction
 ## Feature Selection
-This folder includes that files for feature selection and preparation data needed for matrix construction.\
+This folder includes that files for feature selection and preparation data needed for matrix construction.
 ## Feature Matrix Construction
 This folder includes that files for feature matrix construction from raw data.\
 The content for each file used in the code:\
