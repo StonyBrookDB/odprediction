@@ -17,3 +17,6 @@ bilstm.add(Bidirectional(LSTM(512)))
 bilstm.add(Dense(1))
 bilstm.compile(loss='binary_crossentropy',optimizer='adam',metrics=['mae', 'acc'])
 bilstm.fit(trainx3,trainy2,epochs=1,batch_size=64,verbose=1)
+
+
+
