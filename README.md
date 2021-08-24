@@ -33,3 +33,10 @@ Using the permutation method to get the features importances.
 
 ## ICD Codes
 According codes are put in the doc files in seperate folder.
+
+## References
+Xinyu Dong, Jianyuan Deng, Wei Hou, Sina Rashidian, Richard N. Rosenthal, Mary Saltz, Joel H. Saltz, Fusheng Wang,
+Predicting opioid overdose risk of patients with opioid prescriptions using electronic health records based on temporal deep learning,
+Journal of Biomedical Informatics, Volume 116, 2021, 103725, ISSN 1532-0464,
+https://doi.org/10.1016/j.jbi.2021.103725.
+
